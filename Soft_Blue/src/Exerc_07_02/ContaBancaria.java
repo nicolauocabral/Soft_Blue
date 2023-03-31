@@ -1,18 +1,22 @@
 package Exerc_07_02;
 
 public abstract class ContaBancaria {
-	private double saldo;
+	protected double saldo;
 	
-	public double deposito(double valor) {
-		this.saldo = saldo - valor;
-		return saldo;
+	public void depositar (double valor) {
+		saldo += valor;
 	}
 	
-	public double sacar (double valor) {
-		return saldo - valor;
+	public void sacar (double valor) {
+		saldo -= valor;
 	}
 	
+	public void transferir (double valor, ContaBancaria conta) {
+		sacar (valor);
+		conta.depositar(valor);
+		
+	}
 	
-	
+	public abstract double calcularSaldo();	
 
 }
