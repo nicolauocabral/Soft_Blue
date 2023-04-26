@@ -16,6 +16,7 @@ public class main {
 		{
 			//double d = Math.random();
 			//int d = r.nextInt(50);
+			//int d = r.nextInt()
 			int d = gerarInt(50,70);
 
 			System.out.println((i + 1) + " => " + d);
